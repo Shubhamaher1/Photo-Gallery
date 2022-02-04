@@ -18,9 +18,12 @@ class Product extends React.Component {
         <h3 style={{ fontSize: "10px", margin: "10px" }}>
           {this.props.product["product-name"]}
         </h3>
-        <button style={{ cursor: "pointer", margin: "10px" }}>
-          {this.props.product["product-cta-text"]}
-        </button>
+        <div style={{ display: "flex", justifyContent: "space-around" }}>
+          <h5>Catagary: {this.props.product["header-top-left-text"]}</h5>
+          <button style={{ cursor: "pointer", margin: "10px" }}>
+            {this.props.product["product-cta-text"]}
+          </button>
+        </div>
       </div>
     );
   }
