@@ -1,10 +1,16 @@
-import "./styles.css";
+import React from "react";
+import Search from "./component/Search";
+import ProductGrid from "./component/ProductGrid";
 
-export default function App() {
-  return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <>
+        <h1>Myntra</h1>
+        <Search />
+        <ProductGrid />
+      </>
+    );
+  }
 }
+export default App;
