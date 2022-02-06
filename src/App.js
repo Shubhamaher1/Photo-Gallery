@@ -7,10 +7,29 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      productsList: Products,
+      loading:false,
+      productsList: [],
       backupList: Products
     };
   }
+  componentDidMount(){
+    this.setState({
+      loading:true,
+    });
+    fetch('https://json.extendsclass.com/bin/7e69e0bc8561').then((respon)=>{
+      return respon.json();
+    })
+    .then((data)=>{
+      this.setState ( {
+        productsList: data,
+        
+      });
+    })
+    .catch((err)=>{
+      console.log(err);
+    })
+  }
+ 
   updateproduct = (products) => {
     this.setState({
       backupList: products
@@ -24,7 +43,8 @@ class App extends React.Component {
           productsList={this.state.productsList}
           updateproduct={this.updateproduct}
         />
-        <ProductGrid productsList={this.state.backupList} />
+       {this.setState.loading ?(<h1> lodading ....</h1>):<ProductGrid productsList={this.state.backupList} />}
+        
         {/* <ProductGrid style={{ margin: "50px" }} /> */}
         {/* <ProductGrid /> */}
       </div>
