@@ -1,5 +1,7 @@
 const Products = [
   {
+    //don't do like this we have dyanmic value then you have to fatch this and then use it
+
     "product-name": "MEN'S BETTER THAN NAKED&trade; JACKET",
     "product-image-url":
       "http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/mens-better-than-naked-jacket-AVMH_LC9_hero.png",

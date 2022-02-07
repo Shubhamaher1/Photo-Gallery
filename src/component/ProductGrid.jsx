@@ -1,7 +1,7 @@
 import React from "react";
 import { Products } from "../Constant";
 import Product from "./Product";
-
+//it is for app component it will give image in all positin
 class ProductGrid extends React.Component {
   constructor() {
     super();

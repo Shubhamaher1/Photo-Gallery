@@ -1,5 +1,5 @@
 import React from "react";
-
+//this for showing product and it call in product grad
 class Product extends React.Component {
   render() {
     return (

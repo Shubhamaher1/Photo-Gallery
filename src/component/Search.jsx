@@ -1,5 +1,6 @@
 import React from "react";
-
+//it is for search
+//we have to create target here
 class Search extends React.Component {
   constructor() {
     super();
